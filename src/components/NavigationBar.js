@@ -10,7 +10,7 @@ export default function NavigationBar() {
             <li className='NavigationText'>
               <Link to='/women'><ul>Women's</ul></Link>
               <Link to='/men'><ul>Men's</ul></Link>
-              <Link to='/kids'><ul>Kids</ul></Link>
+              <ul>Kids</ul>
               <Link to='/accessories'><ul>Accessories</ul></Link>
             </li>
             <Link to='/'>
