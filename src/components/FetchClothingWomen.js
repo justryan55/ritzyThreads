@@ -9,7 +9,6 @@ export default function FetchClothingWomen() {
         const data = await fetch(url)
         const clothingWomenData = await data.json()
         setClothingWomen(clothingWomenData)
-        console.log(clothingWomenData)
     }
 
     useEffect(() => {

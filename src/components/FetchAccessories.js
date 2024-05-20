@@ -9,7 +9,6 @@ export default function FetchAccessories() {
       const data = await fetch(url)
       const accessoryData = await data.json()
       setAccessory(accessoryData)
-      console.log(accessoryData)
     }
 
     useEffect(() => {

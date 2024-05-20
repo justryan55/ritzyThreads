@@ -1,12 +1,12 @@
 import React from 'react'
 import NavigationBar from '../components/NavigationBar'
-import FetchClothingMen from '../components/FetchClothingMen'
+import FetchMiscellaneous from '../components/FetchMiscellaneous'
 
-export default function Men() {
+export default function Accessories() {
   return (
     <div>
         <NavigationBar />
-        <FetchClothingMen />
+        <FetchMiscellaneous />
     </div>
   )
 }

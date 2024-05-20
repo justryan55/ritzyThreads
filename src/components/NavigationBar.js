@@ -19,9 +19,9 @@ export default function NavigationBar() {
                   className='NavigationLogo' />
             </Link>
             <li className='NavigationText'>
-                <ul>Brands</ul>
+                <Link to='/miscellaneous'><ul>Miscellaneous</ul></Link>
                 <ul>Sale</ul>
-                <ul>Clothing</ul>
+                <Link to='/clothing'><ul>Products</ul></Link>
                 <ul>Our Purpose</ul> 
             </li>
         </div>
