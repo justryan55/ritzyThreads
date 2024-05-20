@@ -6,7 +6,7 @@ const Card = ({item}) => {
   const navigate = useNavigate()
 
   function handleClick() {
-    navigate(`/product/${item.id}/${item.price}/${encodeURIComponent(item.description)}`)
+    navigate(`/product/${item.id}`)
 
   }
 

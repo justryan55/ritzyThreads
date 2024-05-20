@@ -87,3 +87,29 @@ a {
   margin-bottom: 0;
   font-weight: 500;
 }
+
+.ItemCard {
+  display: grid;
+  grid-template-columns: 500px 350px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.ItemCard > img {
+  width: 300px;
+  height: 450px;
+  object-fit: contain;
+}
+
+.ItemTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.ItemDescription {
+  font-size: 1rem;
+}
+
+.ItemPrice {
+  font-size: 1rem;
+}
