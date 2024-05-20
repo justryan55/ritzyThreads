@@ -8,9 +8,11 @@
   display: grid;
   grid-template-columns: 5fr 0.1fr;
 }
+
 .NavigationContainer {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 .NavigationBar {
@@ -49,4 +51,39 @@
 a {
   text-decoration: none;
   color: black;
+}
+
+.GalleryCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.GalleryCard {
+  display: grid;
+  grid-template-rows: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.GalleryCard > p {
+  display: flex;
+  justify-content: center;
+}
+
+
+.GalleryCard > img {
+  margin-left: 50px; /* temporary fix to images not centering */
+  display: flex;
+  width: 100px;
+  height: auto;
+}
+
+.GalleryCardTitle {
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 500;
 }
