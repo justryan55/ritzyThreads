@@ -12,7 +12,6 @@
 .NavigationContainer {
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
 }
 
 .NavigationBar {
@@ -59,6 +58,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  padding-top: 50px;
 }
 
 .GalleryCard {
@@ -93,12 +93,17 @@ a {
   grid-template-columns: 500px 350px;
   justify-content: center;
   margin-top: 100px;
+  
 }
 
 .ItemCard > img {
   width: 300px;
   height: 450px;
   object-fit: contain;
+  border: 0.5px rgb(0,0,0, 50%) solid;
+  padding: 50px;
+  border-radius: 10px;
+
 }
 
 .ItemTitle {
@@ -112,4 +117,46 @@ a {
 
 .ItemPrice {
   font-size: 1rem;
+}
+
+.Quantity {
+  display: flex;
+  align-items: center;
+}
+
+.Quantity > label {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.Quantity > input {
+  width: 40px;
+  text-align: center;
+
+}
+
+.Quantity > img {
+  height: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.AddToCartSection {
+  margin-top: 10px;
+}
+
+.AddToCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #a9d6e5;
+  border-color: #a9d6e5;
+}
+
+.AddToCart > img {
+  padding-right: 10px;
+  width: 20px;
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import QuantitySection from './QuantitySection'
 
 export default function ItemCard() {
   const { itemId } = useParams()
@@ -25,6 +26,7 @@ export default function ItemCard() {
           <p className='ItemTitle'>{product.title}</p>
           <p className='ItemDescription'>{product.description}</p>
           <p className='ItemPrice'>£{product.price}</p>
+          <QuantitySection />
         </div>
     </div>
   )
