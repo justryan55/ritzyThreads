@@ -15,6 +15,14 @@ export default function QuantitySection() {
         setQuantity(quantity - 1)
     }
 
+    function handleOnChange(e){
+        if (e.target.value < 0){
+            setQuantity(0)
+        } else {
+            setQuantity(e.target.value)
+        }
+    } 
+
     function addItemToCart(){
         console.log(quantity)
         
@@ -28,7 +36,7 @@ export default function QuantitySection() {
             <input type='numeric' 
                 name='quantity'
                 min={0}
-                onChange={e => setQuantity(e.target.value)}
+                onChange={handleOnChange}
                 value={quantity}>
             </input>
             <img src='/plus.svg' alt='add' onClick={increaseQuantity} />
