@@ -1,5 +1,5 @@
 import React from 'react'
-import ShoppingIcon from './ShoppingIcon'
+import ShoppingContext from './CartContext'
 import { Link } from 'react-router-dom';
 
 export default function NavigationBar() {
@@ -31,7 +31,7 @@ export default function NavigationBar() {
                     alt='user'
                     className='NavigationUser'/>
               <Link to='/cart'>
-                <ShoppingIcon />
+                <ShoppingContext />
               </Link>
             </div>
     </div>
