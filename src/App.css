@@ -160,3 +160,12 @@ a {
   padding-right: 10px;
   width: 20px;
 }
+
+.Cart {
+  display: flex;
+  flex-direction: row;
+}
+
+.ShoppingIcon {
+  margin-right: 5px;
+}
