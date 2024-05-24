@@ -26,7 +26,7 @@ export default function ItemCard() {
           <p className='ItemTitle'>{product.title}</p>
           <p className='ItemDescription'>{product.description}</p>
           <p className='ItemPrice'>£{product.price}</p>
-          <QuantitySection />
+          <QuantitySection product={product} />
         </div>
     </div>
   )

@@ -8,8 +8,10 @@ export function CartProvider( { children }) {
   const [cartItems, setCartItems] = useState([])
 
   return (
-    <CartQuantityContext.Provider value={[cartQuantity, setCartQuantity, cartItems, setCartItems]}>
-      {children}
+    <CartQuantityContext.Provider value={[cartQuantity, setCartQuantity]}>
+      <CartItemsContext.Provider value={[cartItems, setCartItems]}>
+          {children}
+      </CartItemsContext.Provider>
     </CartQuantityContext.Provider>
-  )
+)
 }

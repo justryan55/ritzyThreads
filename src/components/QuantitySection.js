@@ -1,14 +1,15 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CartQuantityContext } from './CartContext'
 import { CartItemsContext } from './CartContext'
 
-export default function QuantitySection() {
+export default function QuantitySection({product}) {
     const [quantity, setQuantity] = useState(0)
     const [cartQuantity, setCartQuantity] = useContext(CartQuantityContext)
     const [cartItems, setCartItems] = useContext(CartItemsContext)
+    
 
     function increaseQuantity(){
-        setQuantity(Number(quantity) + 1)
+        setQuantity(prevQuantity => Number(prevQuantity) + 1)
     }
 
     function decreaseQuantity(){
@@ -16,7 +17,7 @@ export default function QuantitySection() {
             return
         }
 
-        setQuantity(Number(quantity) - 1)
+        setQuantity(prevQuantity => Number(quantity) - 1)
     }
 
     function handleOnChange(e){
@@ -27,8 +28,18 @@ export default function QuantitySection() {
         }
     } 
 
+    const addItemsToArray = () => {
+        
+    }
+
     function addItemToCart(){
-        setCartQuantity(cartQuantity + quantity)
+        if (quantity > 0){
+            setCartQuantity(prevCartQuantity => prevCartQuantity + quantity)
+            setCartItems(prevCartItems => [...prevCartItems, { product} ])
+            
+            // console.log(cartItems)
+        }
+
         
     }
 

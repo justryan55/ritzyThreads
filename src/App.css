@@ -169,3 +169,46 @@ a {
 .ShoppingIcon {
   margin-right: 5px;
 }
+
+.CartPageHeader {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.CartHeaders {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  font-weight: 500;
+}
+
+.ProductHeader {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.ShoppingCartGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.LeftColumn {
+  display: flex;
+  flex-direction: row;
+}
+
+.LeftColumn img {
+  height: 100px;
+  width: 300px;
+  object-fit: contain;
+  padding-right: 10px;
+  padding-bottom: 50px;
+}
+
+.EmptyCart {
+  display: flex;
+  justify-content: center;
+}
