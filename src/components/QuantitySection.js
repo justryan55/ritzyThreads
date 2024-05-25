@@ -1,9 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { CartQuantityContext } from './CartContext'
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { CartQuantityContext, ItemQuantityContext } from './CartContext'
 import { CartItemsContext } from './CartContext'
 
+
 export default function QuantitySection({product}) {
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useContext(ItemQuantityContext)
     const [cartQuantity, setCartQuantity] = useContext(CartQuantityContext)
     const [cartItems, setCartItems] = useContext(CartItemsContext)
     
@@ -28,20 +29,16 @@ export default function QuantitySection({product}) {
         }
     } 
 
-    const addItemsToArray = () => {
-        
-    }
-
     function addItemToCart(){
         if (quantity > 0){
             setCartQuantity(prevCartQuantity => prevCartQuantity + quantity)
-            setCartItems(prevCartItems => [...prevCartItems, { product} ])
+            setCartItems(prevCartItems => [...prevCartItems, { product, quantity } ])
             
-            // console.log(cartItems)
         }
 
         
     }
+    console.log('cartQuantity', cartQuantity)
 
   return (
     <div className='QuantitySection'>
