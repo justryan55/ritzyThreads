@@ -9,7 +9,7 @@ export default defineConfig({
     },
     server: {
       port: 3000,
-      open: true, // Automatically open the browser
+      open: true, 
     },
     plugins: [react()],
     define: {
