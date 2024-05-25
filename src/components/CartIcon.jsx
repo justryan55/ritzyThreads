@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { CartQuantityContext } from './CartContext'
+import shoppingCartIcon from '../../public/shopping-cart.svg'
 
 
 export default function CartIcon() {
@@ -7,7 +8,7 @@ export default function CartIcon() {
 
     return (
       <div className='Cart'>
-          <img src='/shopping-cart.svg' 
+          <img src={shoppingCartIcon}
                alt='cart' 
                className='ShoppingIcon' />
           <p>{cartQuantity}</p>

@@ -1,6 +1,8 @@
 import React from 'react'
 import CartIcon from './CartIcon'
 import { Link } from 'react-router-dom';
+import logo from '../../public/alpha-r-circle.svg'
+import user from '../../public/user.svg'
 
 export default function NavigationBar() {
   return (
@@ -14,7 +16,7 @@ export default function NavigationBar() {
               <Link to='/accessories'><ul>Accessories</ul></Link>
             </li>
             <Link to='/'>
-              <img src='/alpha-r-circle.svg' 
+              <img src={logo} 
                   alt='logo'
                   className='NavigationLogo' />
             </Link>
@@ -27,7 +29,7 @@ export default function NavigationBar() {
         </div>
       </div>
       <div className='icons'>
-              <img src='/user.svg' 
+              <img src={user}
                     alt='user'
                     className='NavigationUser'/>
               <Link to='/cart'>

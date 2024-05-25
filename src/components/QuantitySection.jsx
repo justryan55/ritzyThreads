@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { CartQuantityContext, ItemQuantityContext } from './CartContext'
 import { CartItemsContext } from './CartContext'
+import plusIcon from '../../public/plus.svg'
+import minusIcon from '../../public/minus.svg'
+import shoppingCartIcon from '../../public/shopping-cart.svg'
 
 
 export default function QuantitySection({product}) {
@@ -44,18 +47,18 @@ export default function QuantitySection({product}) {
     <div className='QuantitySection'>
         <div className='Quantity'>
             <label htmlFor='quantity'>Quantity: </label>
-            <img src='/minus.svg' alt='minus' onClick={decreaseQuantity} />
+            <img src={minusIcon} alt='minus' onClick={decreaseQuantity} />
             <input type='numeric' 
                 name='quantity'
                 min={0}
                 onChange={handleOnChange}
                 value={quantity}>
             </input>
-            <img src='/plus.svg' alt='add' onClick={increaseQuantity} />
+            <img src={plusIcon} alt='add' onClick={increaseQuantity} />
         </div>
         <div className='AddToCartSection'>
             <button className='AddToCart' onClick={addItemToCart}>
-                <img src='/shopping-cart.svg' alt='cart' />
+                <img src={shoppingCartIcon} alt='cart' />
                 Add to cart
             </button>
         </div>
