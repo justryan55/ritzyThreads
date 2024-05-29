@@ -6,12 +6,13 @@ import Shop from './Shop';
 import Women from './Women';
 import Men from './Men';
 import Accessories from './Accessories';
-import Clothing from './Clothing';
+import Products from './Products';
 import Miscellaneous from './Miscellaneous';
 import ProductDetails from './ProductDetails';
 import Layout from '../components/Layout';
 import Kids from "./Kids";
 import Sale from "./Sale";
+import Purpose from "./Purpose";
 
 const router = createBrowserRouter([
     {
@@ -47,8 +48,8 @@ const router = createBrowserRouter([
           element: <Accessories /> 
         },
         { 
-          path: 'clothing', 
-          element: <Clothing /> 
+          path: 'products', 
+          element: <Products /> 
         },
         { 
           path: 'miscellaneous', 
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
         },
         { 
           path: 'purpose', 
-          element: <Miscellaneous /> 
+          element: <Purpose /> 
         },
         { 
           path: 'product/:itemId', 

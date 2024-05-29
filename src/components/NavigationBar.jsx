@@ -73,7 +73,7 @@ export default function NavigationBar( {activeItem, setActiveItem}) {
                 </Link>
                 <Link 
                 className={`NavItem ${activeItem === "Products" ? 'active' : ''}`} 
-                to='/clothing'
+                to='/products'
                 onClick={() => handleClick("Products")}
                 >
                   <ul>Products</ul>

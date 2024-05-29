@@ -5,6 +5,108 @@
   background-color: rgb(241, 241, 241);
 }
 
+.HomeSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.HomeLeftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.HomeRightColumn {
+  display: grid;
+  width: 50%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.HomeRightColumn img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / 2;
+  padding-top: 100px;
+}
+
+.HomeRightColumn img:nth-child(2) {
+  grid-column: 2;
+  padding-top: 50px;
+  padding-right: 20px;
+}
+
+.HomeRightColumn img:nth-child(3) {
+  grid-column: 2;
+  padding-top: 0px;
+}
+
+.HomeRightColumn img:nth-child(4) {
+  grid-column: 3;
+  grid-row: 1 / 2;
+  padding-top: 100px;
+}
+
+.HomeImage {
+  height: 400px;
+  border-radius: 30px;
+}
+
+.HomeTextSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.HomeHeader {
+  font-size: 4em;
+  font-weight: 700;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.HomeText {
+  width: 50%;
+  font-size: 1.25em;
+  margin-top: 0px;
+  color: rgb(0,0,0, 70%);
+}
+
+.ShopBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ShopBtn {
+  padding: 10px 50px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.5); 
+  background-color: #1D3557;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.ShopBtn:hover {
+  background-color: #457B9D;
+  transform: translateY(1px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ShopBtn:active {
+  background-color: #1A2D47;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 .HeaderContainer {
   display: flex;
   justify-content: space-between;
@@ -31,6 +133,11 @@
   background-color: white;
   border-top: 1px rgb(0,0,0, 30%) solid;
   padding: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  
 }
 
 .SocialContainer {
@@ -160,10 +267,11 @@ a {
 .GalleryCardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
   padding-top: 50px;
   height: 100vh;
+  overflow: auto;
 }
 
 
@@ -206,6 +314,7 @@ a {
   font-weight: 500;
 }
 
+
 .ItemCard {
   display: grid;
   grid-template-columns: 500px 350px;
@@ -215,12 +324,15 @@ a {
 }
 
 .ItemCard > img {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   height: 450px;
   object-fit: contain;
-  border: 0.5px rgb(0,0,0, 50%) solid;
+  border: 0.5px rgb(0,0,0, 25%) solid;
   padding: 50px;
-  border-radius: 10px;
+  border-radius: 20px;
+  margin-bottom: 50px;
 
 }
 
@@ -315,15 +427,24 @@ a {
 
 .LeftColumn {
   display: flex;
+  margin-bottom: 50px;
+  margin-left: 50px;
   flex-direction: row;
 }
 
 .LeftColumn img {
   height: 100px;
-  width: 300px;
+  width: 150px;
   object-fit: contain;
   padding-right: 10px;
-  padding-bottom: 50px;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-right: 50px;
+
+
+  
 }
 
 .EmptyCart {

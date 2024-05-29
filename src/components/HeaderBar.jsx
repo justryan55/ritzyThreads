@@ -26,7 +26,7 @@ export const HeaderBar = ({ onLogoClick }) => {
               <img src={user}
                     alt='user'
                     className='NavigationUser'/>
-              <Link to='/cart'>
+              <Link to='/cart' onClick={onLogoClick}>
                 <CartIcon />
               </Link>
       </div>

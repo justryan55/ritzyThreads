@@ -20,7 +20,8 @@ export default function ItemCard() {
 
 
   return (
-    <div className='ItemCard'>
+    <div className='ItemCardContainer'>
+      <div className='ItemCard'>
         <img src={product.image} alt={product.title} />
         <div className='ItemDetails'>
           <p className='ItemTitle'>{product.title}</p>
@@ -28,6 +29,7 @@ export default function ItemCard() {
           <p className='ItemPrice'>£{product.price}</p>
           <QuantitySection product={product} />
         </div>
+      </div>
     </div>
   )
 }
