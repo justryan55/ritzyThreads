@@ -10,6 +10,7 @@ import Clothing from './Clothing';
 import Miscellaneous from './Miscellaneous';
 import ProductDetails from './ProductDetails';
 import Layout from '../components/Layout';
+import Kids from "./Kids";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
           element: <Men /> 
         },
         { 
+          path: 'kids', 
+          element: <Kids /> 
+        },
+        { 
           path: 'accessories', 
           element: <Accessories /> 
         },
@@ -46,6 +51,14 @@ const router = createBrowserRouter([
         },
         { 
           path: 'miscellaneous', 
+          element: <Miscellaneous /> 
+        },
+        { 
+          path: 'sale', 
+          element: <Miscellaneous /> 
+        },
+        { 
+          path: 'purpose', 
           element: <Miscellaneous /> 
         },
         { 
