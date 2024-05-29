@@ -11,6 +11,7 @@ import Miscellaneous from './Miscellaneous';
 import ProductDetails from './ProductDetails';
 import Layout from '../components/Layout';
 import Kids from "./Kids";
+import Sale from "./Sale";
 
 const router = createBrowserRouter([
     {
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
         },
         { 
           path: 'sale', 
-          element: <Miscellaneous /> 
+          element: <Sale />
         },
         { 
           path: 'purpose', 
