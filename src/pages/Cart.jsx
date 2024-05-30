@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { CartItemsContext, CartQuantityContext, ItemQuantityContext } from '../components/CartContext'
 import removeIcon from '../../public/trash-3.svg'
-import { handler } from 'tailwindcss-aspect-ratio'
 
 export default function Cart() {
   const [cartQuantity, setCartQuantity] = useContext(CartQuantityContext)
