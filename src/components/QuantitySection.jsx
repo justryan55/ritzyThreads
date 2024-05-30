@@ -34,16 +34,29 @@ export default function QuantitySection({product}) {
 
     function addItemToCart(){
         if (quantity > 0){
+            const productExists = cartItems.find((item) => item.product.id === product.id)
+
+            if (productExists){
+                setCartItems(prevCartItems => 
+                    prevCartItems.map((item) => 
+                        item.product.id === product.id
+                            ? { ...item, quantity: item.quantity + quantity}
+                            : item
+                        )
+                )
+            } else {
+                setCartItems(prevCartItems => [...prevCartItems, { product, quantity } ])
+            }
+
+
             setCartQuantity(prevCartQuantity => prevCartQuantity + quantity)
-            setCartItems(prevCartItems => [...prevCartItems, { product, quantity } ])
             
         }
 
         
     }
-    console.log('cartQuantity', cartQuantity)
 
-  return (
+    return (
     <div className='QuantitySection'>
         <div className='Quantity'>
             <p className=''>Quantity </p>

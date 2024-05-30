@@ -4,6 +4,7 @@ import NavigationBar from './NavigationBar'
 import { HeaderBar } from './HeaderBar';
 import { PromoBar } from './PromoBar';
 import { Footer } from './Footer';
+import { NavMobile } from './NavMobile';
 
 const Layout = () => {
 
@@ -16,6 +17,7 @@ const Layout = () => {
     return (
       <>
         <HeaderBar onLogoClick={handleResetActiveItem}/>
+        {/* <NavMobile /> */}
         <NavigationBar activeItem={activeItem} setActiveItem={setActiveItem} />
         <PromoBar />
         <main>

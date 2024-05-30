@@ -1,10 +1,19 @@
 import React, { useContext } from 'react'
 import { CartItemsContext, CartQuantityContext, ItemQuantityContext } from '../components/CartContext'
+import removeIcon from '../../public/trash-3.svg'
+import { handler } from 'tailwindcss-aspect-ratio'
 
 export default function Cart() {
   const [cartQuantity, setCartQuantity] = useContext(CartQuantityContext)
   const [cartItems, setCartItems] = useContext(CartItemsContext)
   const [quantity, setQuantity] = useContext(ItemQuantityContext)
+
+  function handleRemoveClick(productId){
+    
+    const newCartData = cartItems.filter((item) => item.product.id !== productId)  
+    setCartItems(newCartData)
+    setCartQuantity(newCartData.reduce((total, item) => total + item.quantity, 0))
+  }
 
   return (
     <div className='ShoppingCartPage'>
@@ -20,14 +29,20 @@ export default function Cart() {
         <p className='EmptyCart'>Cart is empty</p>)
         }
         {cartItems.map((product) => (
-          <div className='ShoppingCartGrid'>
+          <div className='ShoppingCartGrid' key={product.product.id}>
             <div className='LeftColumn'>
-              <img src={product.product.image} alt='product.product.title'/>
+              <img src={product.product.image} alt={product.product.title}/>
               <p>{product.product.title}</p>
             </div>
             <p className='CartColumn'>{product.quantity}</p>
             <p className='CartColumn'>£{product.product.price}</p>
             <p className='CartColumn'>£{product.quantity * product.product.price}</p>
+            <img 
+              src={removeIcon} 
+              alt='remove' 
+              className='RemoveIcon'
+              onClick={() => handleRemoveClick(product.product.id)}
+              />
           </div>
         )
       )}

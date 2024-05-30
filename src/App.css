@@ -492,7 +492,7 @@ a {
 
 .CartHeaders {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
   font-weight: 500;
 }
 
@@ -504,7 +504,7 @@ a {
 
 .ShoppingCartGrid {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 0.5fr;
 }
 
 .LeftColumn {
@@ -529,4 +529,34 @@ a {
 .EmptyCart {
   display: flex;
   justify-content: center;
+}
+
+.RemoveIcon {
+  height: 22px;
+}
+
+.RemoveIcon:hover {
+  cursor: pointer;
+}
+
+.PurposeContainer {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 50%;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.PurposeText {
+  color: #333;
+  line-height: 1.6;
+}
+
+.PurposeText br {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1023px) {
+  
 }
