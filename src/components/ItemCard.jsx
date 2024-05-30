@@ -25,8 +25,18 @@ export default function ItemCard() {
         <img src={product.image} alt={product.title} />
         <div className='ItemDetails'>
           <p className='ItemTitle'>{product.title}</p>
-          <p className='ItemDescription'>{product.description}</p>
           <p className='ItemPrice'>£{product.price}</p>
+          {/* <p className='ItemDescription'>{product.description}</p> */}
+          <div className='ItemSizing'>
+            <p className='SizeHeader'>Size</p>
+            <div className='SizingBoxContainer'>
+              <p className='SizingBoxOOS'>XS</p>
+              <p className='SizingBoxOOS'>S</p>
+              <p className='SizingBox'>M</p>
+              <p className='SizingBoxOOS'>L</p>
+              <p className='SizingBoxOOS'>XL</p>
+            </div>
+          </div>
           <QuantitySection product={product} />
         </div>
       </div>

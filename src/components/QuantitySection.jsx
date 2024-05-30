@@ -3,7 +3,7 @@ import { CartQuantityContext, ItemQuantityContext } from './CartContext'
 import { CartItemsContext } from './CartContext'
 import plusIcon from '../../public/plus.svg'
 import minusIcon from '../../public/minus.svg'
-import shoppingCartIcon from '../../public/shopping-cart.svg'
+import shoppingCartIcon from '../../public/shopping-cart (1).svg'
 
 
 export default function QuantitySection({product}) {
@@ -46,15 +46,18 @@ export default function QuantitySection({product}) {
   return (
     <div className='QuantitySection'>
         <div className='Quantity'>
-            <label htmlFor='quantity'>Quantity: </label>
-            <img src={minusIcon} alt='minus' onClick={decreaseQuantity} />
-            <input type='numeric' 
-                name='quantity'
-                min={0}
-                onChange={handleOnChange}
-                value={quantity}>
-            </input>
-            <img src={plusIcon} alt='add' onClick={increaseQuantity} />
+            <p className=''>Quantity </p>
+            <div className='QuantityInputs'>
+                <label htmlFor='quantity'></label>
+                <img src={minusIcon} alt='minus' onClick={decreaseQuantity} />
+                <input type='numeric' 
+                    name='quantity'
+                    min={0}
+                    onChange={handleOnChange}
+                    value={quantity}>
+                </input>
+                <img src={plusIcon} alt='add' onClick={increaseQuantity} />
+            </div>
         </div>
         <div className='AddToCartSection'>
             <button className='AddToCartBtn' onClick={addItemToCart}>
