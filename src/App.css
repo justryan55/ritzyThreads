@@ -371,22 +371,42 @@ a {
   margin-right: 10px;
 }
 
+
 .AddToCartSection {
   margin-top: 10px;
 }
 
-.AddToCart {
+.AddToCartBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 10px 50px;
   width: 200px;
   border-radius: 10px;
-  background-color: #a9d6e5;
-  border-color: #a9d6e5;
+  background-color: #1D3557;
+  border: 0.5px solid rgba(0, 0, 0, 0.5); 
+  color: white;
+  font-size: 0.85em;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  width: 100%;
 }
 
-.AddToCart > img {
+.AddToCartBtn:hover {
+  background-color: #457B9D;
+  transform: translateY(1px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.AddToCartBtn:active {
+  background-color: #1A2D47;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.AddToCartBtn > img {
   padding-right: 10px;
   width: 20px;
 }

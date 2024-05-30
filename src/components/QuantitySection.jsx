@@ -57,7 +57,7 @@ export default function QuantitySection({product}) {
             <img src={plusIcon} alt='add' onClick={increaseQuantity} />
         </div>
         <div className='AddToCartSection'>
-            <button className='AddToCart' onClick={addItemToCart}>
+            <button className='AddToCartBtn' onClick={addItemToCart}>
                 <img src={shoppingCartIcon} alt='cart' />
                 Add to cart
             </button>
